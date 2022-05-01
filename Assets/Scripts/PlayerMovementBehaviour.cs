@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class PlayerMovementBehaviour : MonoBehaviour
 {
-    [SerializeField] private Rigidbody rigidbody;
     [SerializeField] private float speed;
 
     private void Update()
@@ -26,6 +25,6 @@ public class PlayerMovementBehaviour : MonoBehaviour
 
         var currentPosition = transform.position;
 
-        transform.position = Vector3.Lerp(currentPosition, currentPosition + movement * speed, Time.deltaTime);
+        transform.position = Vector3.Lerp(currentPosition, currentPosition + movement.normalized * speed, Time.deltaTime);
     }
 }
