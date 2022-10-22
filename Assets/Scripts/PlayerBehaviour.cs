@@ -13,4 +13,6 @@ public class PlayerBehaviour : MonoBehaviour
         OnScoreChanged?.Invoke(sphereCount);
         Destroy(sphere.gameObject);
     }
+    
+    
 }
